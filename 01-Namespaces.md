@@ -203,13 +203,33 @@ kube-public          Active   89m
 kube-system          Active   89m
 local-path-storage   Active   89m
 
+### Het namespace cli commando 
+We kunnen een namespace maken via het cli commando 
+kubectl create namespace namespace-cli
+Maar beter is van een namespace te maken via een yaml-bestand.
+
+- [ ] Maak bestand aan Namespace.yaml
 ```
 nano Namespace.yaml
 ```
-- [ ] Toevoegen
+Voor waarde van de namespace naam:  
+- kleine letters (geen hoofdletters)  
+- een minteken is toegelaten  
+- start en eindigd op een letter  
+- 'mijn-name',  of '123-abc', de validatie regel is '[a-z0-9]([-a-z0-9]*[a-z0-9])  
+
+- [ ] Toevoegen aan Namespace.yaml
 ```
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: namespace-bestand
+  name: mijn_namespace
 ```
+- [ ] Namespace Toevoegen aan cluster
+```
+kubectl apply -f Namespace.yaml
+```
+
+
+
+
