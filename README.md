@@ -10,29 +10,22 @@ Already a pro? Just edit this README.md and make it your own. Want to make it ea
 
 ## Installatie
 
-sudo snap install act civo gh  
-sudo snap install go --classic 
-sudo snap install gum  --classic 
-sudo snap install task --classic 
-sudo snap install k9s 
-sudo snap install kustomize 
+- [ ] sudo snap install act civo gh  
+- [ ] sudo snap install go --classic 
+- [ ] sudo snap install gum  --classic 
+- [ ] sudo snap install task --classic 
+- [ ] sudo snap install k9s 
+- [ ] sudo snap install kustomize 
 
-https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/#install-using-native-package-management 
-sudo apt-get install -y kubectx nodejs procps git-all 
+- [ ] https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/#install-using-native-package-management 
+- [ ] sudo apt-get install -y kubectx nodejs procps git-all 
 
-go install sigs.k8s.io/kind@v0.24.0 
+- [ ] go install sigs.k8s.io/kind@v0.24.0 
 
 ## Add your files
 
 - [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
 - [ ] [Add files using the command line](https://docs.gitlab.com/topics/git/add_files/#add-files-to-a-git-repository) or push an existing Git repository with the following command:
-
-```
-cd existing_repo
-git remote add origin http://192.168.3.112/bart/kubernetis.git
-git branch -M main
-git push -uf origin main
-```
 
 ## Integrate with your tools
 
