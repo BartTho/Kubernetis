@@ -52,11 +52,21 @@ kind: Namespace
 metadata:
   name: mijn_namespace
 ```
-- [ ] Namespace Toevoegen aan cluster
+- [ ] Aanmaken van de namespace
 ```
 kubectl apply -f Namespace.yaml
 ```
-
+- [ ] Controleren of de nieuwe-namespace bestaat
+```
+kubectl get namespaces
+```
+NAME                 STATUS   AGE
+default              Active   116m
+kube-node-lease      Active   116m
+kube-public          Active   116m
+kube-system          Active   116m
+local-path-storage   Active   116m
+**mijn-namespace       Active   81s**__
 
 
 
