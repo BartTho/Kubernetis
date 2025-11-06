@@ -83,9 +83,12 @@ sudo apt-get install -y kubectx nodejs procps git-all
 ```
 ##### Alias toevoegen aan .bashrc
 - [ ] nano ~/.bashrc   
-      alias k=kubectl
-      alias t=task
-      alias tl='task --list-all'
+```
+alias k=kubectl
+alias t=task
+alias tl='task --list-all'
+```
+##### kind installeren
 ```
 go install sigs.k8s.io/kind@v0.24.0 
 ```
