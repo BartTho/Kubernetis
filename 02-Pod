@@ -1,0 +1,27 @@
+# Een Pod
+
+- Een pod is de kleinste eenheid
+- We maken normaal nooid een pod direct, we doen dit hier als demo
+
+- [] Maak een bestand aan voor het creëeren van een Pod en een Namespace voor de Pod
+```
+nano Namespace.yaml
+```
+apiVersion: v1  
+kind: Namespace  
+metadata:  
+  name: demo  
+
+```
+nano Pod.minimaal.yaml
+```
+apiVersion: v1  
+kind: Pod  
+metadata:  
+  name: nginx-minimal  
+spec:  
+  containers:  
+    - name: nginx  
+      image: nginx:1.26.0  
+
+
