@@ -13,9 +13,14 @@ Already a pro? Just edit this README.md and make it your own. Want to make it ea
 - [ ] sudo snap install act civo gh  
 - [ ] sudo snap install go --classic 
 - [ ] sudo snap install gum  --classic 
-- [ ] sudo snap install task --classic 
 - [ ] sudo snap install k9s 
 - [ ] sudo snap install kustomize 
+
+- [ ] https://taskfile.dev/docs/installation
+      - [ ] sudo snap install task --classic
+      - [ ] nano .bashrc eval "$(task --completion bash)"
+      - [ ] uit-loggen en terug inloggen
+
 
 - [ ] https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/#install-using-native-package-management 
 - [ ] sudo apt-get install -y kubectx nodejs procps git-all 
