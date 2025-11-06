@@ -1,10 +1,8 @@
-```
-kubectx
-```
-kind-kind
+- [ ] Overzicht van alle kubectl commando's
+https://kubernetes.io/docs/reference/kubectl/
 
-#### kubectl explain WAT?
-
+#### kubectl explain ?
+- [ ] met explane kunen we uitleg vragen van objecten
 ```
 kubectl explain namespace
 ```
@@ -21,6 +19,7 @@ FIELDS:
     Servers should convert recognized schemas to the latest internal value, and
 ...
 
+- [ ] toon alle bestaande namespace
 ```
 kubectl get namespaces
 ```
