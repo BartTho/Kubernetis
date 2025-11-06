@@ -64,6 +64,11 @@ sudo snap install kustomize
 ```
 sudo snap install task --classic
 ```
+##### git repo clonen
+```
+git clone http://192.168.3.112/bart/kubernetis
+```
+##### Aanpassen ~/.profile
       - [ ] chmod +x task.bash
       - [ ] nano ~/.profile
       - [ ] source $HOME/kubernetis/task.bash
