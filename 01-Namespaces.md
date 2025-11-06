@@ -68,7 +68,17 @@ kube-system          Active   116m
 local-path-storage   Active   116m  
 **mijn-namespace       Active   81s**__  
 
+- [ ] Verwijderen en Controleren
+```
+kubectl delete -f Namespace.yaml
+kubectl get namespaces
+```
+namespace "mijn-namespace" deleted
 
-
-
+NAME                 STATUS   AGE  
+default              Active   116m  
+kube-node-lease      Active   116m  
+kube-public          Active   116m  
+kube-system          Active   116m  
+local-path-storage   Active   116m  
 
