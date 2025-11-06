@@ -101,25 +101,25 @@ task kind:02-create-cluster
 ```
 kubectl get nodes
 ```
-NAME                 STATUS   ROLES           AGE     VERSION
-kind-control-plane   Ready    control-plane   3m      v1.31.0
-kind-worker          Ready    <none>          2m44s   v1.31.0
-kind-worker2         Ready    <none>          2m44s   v1.31.0
+NAME                 STATUS   ROLES           AGE     VERSION  
+kind-control-plane   Ready    control-plane   3m      v1.31.0  
+kind-worker          Ready    <none>          2m44s   v1.31.0  
+kind-worker2         Ready    <none>          2m44s   v1.31.0  
 ```
 kubectl get pods -A
 ```
-NAMESPACE            NAME                                         READY   STATUS    RESTARTS   AGE
-kube-system          coredns-6f6b679f8f-r8v5f                     1/1     Running   0          4m11s
-kube-system          coredns-6f6b679f8f-rw8k6                     1/1     Running   0          4m11s
-kube-system          etcd-kind-control-plane                      1/1     Running   0          4m19s
-kube-system          kindnet-g5vf4                                1/1     Running   0          4m5s
-kube-system          kindnet-jctms                                1/1     Running   0          4m5s
-kube-system          kindnet-lzs7b                                1/1     Running   0          4m12s
-kube-system          kube-apiserver-kind-control-plane            1/1     Running   0          4m19s
-kube-system          kube-controller-manager-kind-control-plane   1/1     Running   0          4m19s
-kube-system          kube-proxy-66vdx                             1/1     Running   0          4m5s
-kube-system          kube-proxy-jr85h                             1/1     Running   0          4m5s
-kube-system          kube-proxy-vpj6w                             1/1     Running   0          4m12s
-kube-system          kube-scheduler-kind-control-plane            1/1     Running   0          4m19s
-local-path-storage   local-path-provisioner-57c5987fd4-gfs5d      1/1     Running   0          4m11s
+NAMESPACE            NAME                                         READY   STATUS    RESTARTS   AGE  
+kube-system          coredns-6f6b679f8f-r8v5f                     1/1     Running   0          4m11s  
+kube-system          coredns-6f6b679f8f-rw8k6                     1/1     Running   0          4m11s  
+kube-system          etcd-kind-control-plane                      1/1     Running   0          4m19s  
+kube-system          kindnet-g5vf4                                1/1     Running   0          4m5s  
+kube-system          kindnet-jctms                                1/1     Running   0          4m5s  
+kube-system          kindnet-lzs7b                                1/1     Running   0          4m12s  
+kube-system          kube-apiserver-kind-control-plane            1/1     Running   0          4m19s  
+kube-system          kube-controller-manager-kind-control-plane   1/1     Running   0          4m19s 
+kube-system          kube-proxy-66vdx                             1/1     Running   0          4m5s  
+kube-system          kube-proxy-jr85h                             1/1     Running   0          4m5s  
+kube-system          kube-proxy-vpj6w                             1/1     Running   0          4m12s  
+kube-system          kube-scheduler-kind-control-plane            1/1     Running   0          4m19s  
+local-path-storage   local-path-provisioner-57c5987fd4-gfs5d      1/1     Running   0          4m11s  
 
