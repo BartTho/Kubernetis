@@ -8,18 +8,19 @@ To make it easy for you to get started with GitLab, here's a list of recommended
 
 Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
 
-install
-sudo snap install act civo gh 
-sudo snap install go --classic
-sudo snap install gum  --classic
-sudo snap install task --classic
-sudo snap install k9s
-sudo snap install kustomize
+## Installatie
 
-https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/#install-using-native-package-management
-sudo apt-get install -y kubectx nodejs procps git-all
+sudo snap install act civo gh  
+sudo snap install go --classic 
+sudo snap install gum  --classic 
+sudo snap install task --classic 
+sudo snap install k9s 
+sudo snap install kustomize 
 
-go install sigs.k8s.io/kind@v0.24.0
+https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/#install-using-native-package-management 
+sudo apt-get install -y kubectx nodejs procps git-all 
+
+go install sigs.k8s.io/kind@v0.24.0 
 
 ## Add your files
 
