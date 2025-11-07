@@ -138,30 +138,30 @@ kubectl get pods
 echo "++++++++++++++++++++++++++++++++++++++++++++++"
 ```
 
-deployment.apps/nginx-minimaal configured
-NAME                              READY   STATUS              RESTARTS   AGE
-nginx-beter-545b96d7c4-pkdtb      1/1     Running             0          7m11s
-nginx-minimaal-7544f9f5b-fq7x5    0/1     ContainerCreating   0          0s
-nginx-minimaal-85bcb8bcc9-42gtc   1/1     Running             0          7m12s
-nginx-minimaal-85bcb8bcc9-4h6cl   1/1     Running             0          7m12s
-nginx-minimaal-85bcb8bcc9-6qcp9   1/1     Running             0          7m12s
-++++++++++++++++++++++++++++++++++++++++++++++
-NAME                              READY   STATUS              RESTARTS   AGE
-nginx-beter-545b96d7c4-pkdtb      1/1     Running             0          7m13s
-nginx-minimaal-7544f9f5b-5dtvq    0/1     ContainerCreating   0          1s
-nginx-minimaal-7544f9f5b-fq7x5    1/1     Running             0          2s
-nginx-minimaal-85bcb8bcc9-42gtc   1/1     Running             0          7m14s
-nginx-minimaal-85bcb8bcc9-4h6cl   1/1     Running             0          7m14s
-nginx-minimaal-85bcb8bcc9-6qcp9   0/1     Completed           0          7m14s
-++++++++++++++++++++++++++++++++++++++++++++++
-NAME                             READY   STATUS    RESTARTS   AGE
-nginx-beter-545b96d7c4-pkdtb     1/1     Running   0          7m23s
-nginx-minimaal-7544f9f5b-5dtvq   1/1     Running   0          11s
-nginx-minimaal-7544f9f5b-fq7x5   1/1     Running   0          12s
-nginx-minimaal-7544f9f5b-rm4h7   1/1     Running   0          9s
-
-
-"🚨 Wanneer we de naamruimte verwijderen, worden ook de bronnen erin recursief verwijderd! 🚨 "
+deployment.apps/nginx-minimaal configured  
+NAME                              READY   STATUS              RESTARTS   AGE  
+nginx-beter-545b96d7c4-pkdtb      1/1     Running             0          7m11s  
+nginx-minimaal-7544f9f5b-fq7x5    0/1     ContainerCreating   0          0s  
+nginx-minimaal-85bcb8bcc9-42gtc   1/1     Running             0          7m12s  
+nginx-minimaal-85bcb8bcc9-4h6cl   1/1     Running             0          7m12s  
+nginx-minimaal-85bcb8bcc9-6qcp9   1/1     Running             0          7m12s  
+++++++++++++++++++++++++++++++++++++++++++++++  
+NAME                              READY   STATUS              RESTARTS   AGE  
+nginx-beter-545b96d7c4-pkdtb      1/1     Running             0          7m13s  
+nginx-minimaal-7544f9f5b-5dtvq    0/1     ContainerCreating   0          1s  
+nginx-minimaal-7544f9f5b-fq7x5    1/1     Running             0          2s  
+nginx-minimaal-85bcb8bcc9-42gtc   1/1     Running             0          7m14s  
+nginx-minimaal-85bcb8bcc9-4h6cl   1/1     Running             0          7m14s  
+nginx-minimaal-85bcb8bcc9-6qcp9   0/1     Completed           0          7m14s  
+++++++++++++++++++++++++++++++++++++++++++++++  
+NAME                             READY   STATUS    RESTARTS   AGE  
+nginx-beter-545b96d7c4-pkdtb     1/1     Running   0          7m23s  
+nginx-minimaal-7544f9f5b-5dtvq   1/1     Running   0          11s  
+nginx-minimaal-7544f9f5b-fq7x5   1/1     Running   0          12s  
+nginx-minimaal-7544f9f5b-rm4h7   1/1     Running   0          9s  
+  
+  
+"🚨 Wanneer we de naamruimte verwijderen, worden ook de bronnen erin recursief verwijderd! 🚨 "  
 
 ```
 kubectl delete -f Namespace.yaml
