@@ -1,5 +1,5 @@
-BRON: https://github.com/BretFisher/podspec
-Alle Info : https://www.youtube.com/watch?v=4CzG4Uqd9jM
+BRON: https://github.com/BretFisher/podspec  
+Alle Info : https://www.youtube.com/watch?v=4CzG4Uqd9jM  
 
 # Kubernetes Pod-specificatie: goede standaardinstellingen
 

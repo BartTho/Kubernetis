@@ -39,7 +39,12 @@ tasks:
   06-better-port-forward:
     desc: "Port forward to the better pod configuration"
     cmds:
-      - kubectl port-forward -n ${NAMESPACE} nginx-better 8080:8080
+      - kubectl -n demo-namespace get pod httpd-beter -o jsonpath="{.status.containerStatuses[0].ready}"
+      - kubectl port-forward -n demo-namespace httpd-beter 8080:8080
+      - kubectl -n demo-namespace describe pod httpd-beter
+      - kubectl -n demo-namespace logs httpd-beter --previous
+
+
 
   07-delete-namespace:
     desc: "Delete the namespace to clean up"

@@ -5,4 +5,4 @@ metadata:
 spec:
   containers:
     - name: httpd
-      image: httpd:latest
+      image: cgr.dev/chainguard/nginx:latest
