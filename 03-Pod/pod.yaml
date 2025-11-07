@@ -1,0 +1,48 @@
+spec:
+
+  containers:
+
+      # basiscontainerdetails
+    - name: my-container-name
+      # gebruik nooit herbruikbare tags zoals nieuwste of stabiele versie
+      image: my-image:tag
+      # hardcodeer de luisterpoort als Dockerfile niet is ingesteld met EXPOSE
+      ports:
+        - containerPort: 8080
+          protocol: TCP
+
+      readinessProbe:        # Best deze altijd gebruiken, zelfs als je app geen luisterpoorten heeft (dit heeft invloed op elke rolling update)
+        httpGet:             # Veel time-outwaarden met standaardwaarden, zorg ervoor dat ze ideaal zijn voor je workload
+          path: /ready
+          port: 8080
+      livenessProbe:         # alleen nodig als je app vaak niet reageert of als je geen readinessProbe hebt, maar dit is onderwerp van discussie
+        httpGet:             # Veel time-outwaarden met standaardwaarden, zorg ervoor dat ze ideaal zijn voor je workload
+          path: /alive
+          port: 8080
+
+      resources:             # Omdat als limits = requests, de QoS is ingesteld op "Gegarandeerd"
+        limits:
+          memory: "500Mi"    # ls de container meer dan 500 MB gebruikt, wordt deze gekilled (OOM)
+          #cpu: "2"          # Normaal gesproken niet nodig, tenzij u andere workloads wilt beschermen of de QoS "Gegarandeerd" moet zijn
+        requests:
+          memory: "500Mi"    # SScheduler vindt een knooppunt waar 500 MB beschikbaar is
+          cpu: "1"           # Scheduler vindt een knooppunt waar 1 vCPU beschikbaar is
+
+      # Beveiligingscontext per container
+      # Vergrendel privileges binnen de container
+      securityContext:
+        allowPrivilegeEscalation: false # Voorkom sudo, enz.
+        privileged: false               # Voorkom dat de host zich gedraagt ​​als root
+
+  terminationGracePeriodSeconds: 600 # Standaard is dit 30, maar u hebt mogelijk meer tijd nodig om netjes af te sluiten (HTTP long polling, gebruikersuploads, enz.)
+
+  # Beveiligingscontext per pod
+  # Schakel seccomp in en forceer een niet-rootgebruiker
+  securityContext:
+
+    seccompProfile:
+      type: RuntimeDefault   # schakel seccomp en het standaardprofiel van de runtime in
+
+    runAsUser: 1001          # hardcodeer gebruiker naar niet-root indien niet ingesteld in Dockerfile
+    runAsGroup: 1001         # hardcodeer groep naar niet-root indien niet ingesteld in Dockerfile
+    runAsNonRoot: true       # hardcodeer naar niet-root. Overbodig ten opzichte van bovenstaande indien Dockerfile is ingesteld op USER 1000
