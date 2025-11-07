@@ -1,3 +1,3 @@
 
 
-![Deployments.png](https://git.barttho.be/bart/kubernetis/-/blob/34428fae981d0732766d65f696559294cb8222b4/Afbeeldingen/ReplicaSet.png)
+![Deployments.png](https://git.barttho.be/bart/kubernetis/-/blob/03c59b6c215f09b0c23eb37044ce2d216a8885b4/Afbeeldingen/Deployments.png)
