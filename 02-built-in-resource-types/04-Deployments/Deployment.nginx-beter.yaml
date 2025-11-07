@@ -1,19 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-better
+  name: nginx-beter
   namespace: 04--deployment
   labels:
-    app: nginx-better
+    app: nginx-beter
 spec:
-  replicas: 3
+  #replicas: 3
+  replicas: 1
   selector:
     matchLabels:
-      app: nginx-better
+      app: nginx-beter
   template:
     metadata:
       labels:
-        app: nginx-better
+        app: nginx-beter
     spec:
       containers:
         - name: nginx

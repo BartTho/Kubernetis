@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-minimaal
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx-minimaal
+  template:
+    metadata:
+      labels:
+        app: nginx-minimaal
+    spec:
+      containers:
+        - name: nginx
+#          image: nginx:1.27.0
+          image: nginx:1.28.0
