@@ -1,6 +1,28 @@
 # kubernetis
 
+Installatie 
 
+---------------------
+Nog aanpasssen werken met minikube is eenvoudiger
+Weet nog niet of ik task wil gebruiken
+
+
+- [ ] Cluster met 3 nodes in minikube 
+minikube start --nodes 3 -p multi-node-k8s
+- [ ] Werkt het ?
+kubectl get nodes
+- [ ] label de worker nodes
+kubectl label node multi-node-k8s
+
+
+
+voor helm
+curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
+
+
+helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+
+---------------------
 
 ## Getting started
 
