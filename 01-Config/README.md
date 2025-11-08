@@ -1,7 +1,28 @@
 # kubernetis
 
-kubectl proxy --address='0.0.0.0' --accept-hosts='^*$'  
-http://192.168.2.215:8001/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/#/workloads?namespace=default  
+Installatie 
+
+---------------------
+Nog aanpasssen werken met minikube is eenvoudiger
+Weet nog niet of ik task wil gebruiken
+
+
+- [ ] Cluster met 3 nodes in minikube 
+minikube start --nodes 3 -p multi-node-k8s
+- [ ] Werkt het ?
+kubectl get nodes
+- [ ] label de worker nodes
+kubectl label node multi-node-k8s
+
+
+
+voor helm
+curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
+
+
+helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+
+---------------------
 
 ## Getting started
 
