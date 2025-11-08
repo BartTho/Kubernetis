@@ -6,8 +6,8 @@ metadata:
   labels:
     app: nginx-beter
 spec:
-  #replicas: 3
-  replicas: 1
+  replicas: 3
+  #replicas: 1
   selector:
     matchLabels:
       app: nginx-beter

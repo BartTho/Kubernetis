@@ -159,9 +159,10 @@ nginx-beter-545b96d7c4-pkdtb     1/1     Running   0          7m23s
 nginx-minimaal-7544f9f5b-5dtvq   1/1     Running   0          11s  
 nginx-minimaal-7544f9f5b-fq7x5   1/1     Running   0          12s  
 nginx-minimaal-7544f9f5b-rm4h7   1/1     Running   0          9s  
-  
+
   
 "🚨 Wanneer we de naamruimte verwijderen, worden ook de bronnen erin recursief verwijderd! 🚨 "  
+- [ ] Verwijder de Namespace
 
 ```
 kubectl delete -f Namespace.yaml

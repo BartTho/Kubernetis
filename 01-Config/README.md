@@ -1,6 +1,7 @@
 # kubernetis
 
-
+kubectl proxy --address='0.0.0.0' --accept-hosts='^*$'  
+http://192.168.2.215:8001/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/#/workloads?namespace=default  
 
 ## Getting started
 
