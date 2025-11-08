@@ -5,14 +5,86 @@ Installatie
 ---------------------
 Nog aanpasssen werken met minikube is eenvoudiger
 Weet nog niet of ik task wil gebruiken
-
+- [ ] Installatie minikube 
+```
+sudo apt install -y curl apt-transport-https
+curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+sudo install minikube-linux-amd64 /usr/local/bin/minikube
+sudo snap install kubectl --classic
+```
 
 - [ ] Cluster met 3 nodes in minikube 
+```
 minikube start --nodes 3 -p multi-node-k8s
+```
 - [ ] Werkt het ?
+```
 kubectl get nodes
+```
+
+NAME                 STATUS   ROLES           AGE   VERSION
+kind-control-plane   Ready    control-plane   46h   v1.34.0
+kind-worker          Ready    <none>          46h   v1.34.0
+kind-worker2         Ready    <none>          46h   v1.34.0
+
+
 - [ ] label de worker nodes
-kubectl label node multi-node-k8s
+```
+kubectl label node kind-worker node-role.kubernetes.io/worker=worker
+kubectl label node kind-worker2 node-role.kubernetes.io/worker=worker
+```
+- [ ] Controleren
+```
+kubectl get nodes
+```
+
+NAME                 STATUS   ROLES           AGE   VERSION
+kind-control-plane   Ready    control-plane   46h   v1.34.0
+kind-worker          Ready    worker          46h   v1.34.0
+kind-worker2         Ready    worker          46h   v1.34.0
+
+- [ ] Minikube dashboard
+
+########## minikube dashboard
+- [ ] Installeer helm
+
+```
+curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
+```
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 11928  100 11928    0     0   171k      0 --:--:-- --:--:-- --:--:--  173k
+Downloading https://get.helm.sh/helm-v3.19.0-linux-amd64.tar.gz
+Verifying checksum... Done.
+Preparing to install helm into /usr/local/bin
+[sudo] password for bart: 
+Sorry, try again.
+[sudo] password for bart: 
+helm installed into /usr/local/bin/helm
+
+- [ ] Installeer kubernetes-dashboard via helm
+```
+helm repo add kubernetes-dashboard https://kubernetes.github.io/dashboard/
+```
+
+"kubernetes-dashboard" has been added to your repositories
+- [ ] 
+```
+helm upgrade --install kubernetes-dashboard kubernetes-dashboard/kubernetes-dashboard --create-namespace --namespace kubernetes-dashboard
+kubectl -n kubernetes-dashboard port-forward svc/kubernetes-dashboard-kong-proxy 8443:443 &
+```
+
+- [ ] 
+```
+curl 127.0.0.1:8443
+browser naar ip address
+```
+kubectl -n NAMESPACE create token SERVICE_ACCOUNT
+
+kubectl -n default create token default
+
+
 
 
 
